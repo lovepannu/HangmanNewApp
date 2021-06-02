@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_LoginBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:background="#00aadd"
+        android:layout_margin="5dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/txt_LoginWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:text="Please Login"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="10">
+            <TextView
+                android:id="@+id/txt_UsernamePrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="5dp"
+                android:text="Enter Username"
+                android:layout_gravity="center_horizontal" />
+            <EditText
+                android:id="@+id/edt_Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="5dp"
+                android:hint="Player1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/txt_DifficultyPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="5dp"
+                android:text="Choose difficulty"
+                android:layout_gravity="center_horizontal" />
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rg_Difficulty">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Easy"
+                    android:id="@+id/rb_Easy"
+                    android:layout_gravity="left" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:id="@+id/rb_Normal"
+                    android:layout_gravity="left"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard"
+                    android:id="@+id/rb_Hard"
+                    android:layout_gravity="left" />
+            </RadioGroup>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:text="Login"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>

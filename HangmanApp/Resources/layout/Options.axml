@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_OptionsBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:background="#00aadd"
+        android:layout_margin="5dp" />
+    <TextView
+        android:id="@+id/txt_OptionsWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="Account options and highscore"
+        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/txt_OptionsWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txt_HighScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:text="Your high score is"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/txt_OptionDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:text="Choose difficulty"
+            android:layout_gravity="center_horizontal" />
+        <RadioGroup
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_OptionsDifficulty">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Easy"
+                android:id="@+id/rb_OptionEasy"
+                android:layout_gravity="left" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:id="@+id/rb_OptionNormal"
+                android:layout_gravity="left"
+                android:checked="true" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:id="@+id/rb_OptionHard"
+                android:layout_gravity="left" />
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>
